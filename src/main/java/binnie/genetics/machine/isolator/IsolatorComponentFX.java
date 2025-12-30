@@ -65,7 +65,7 @@ public class IsolatorComponentFX extends MachineComponent implements IRender.Ran
         }
 
         BinnieCore.proxy.getMinecraftInstance().effectRenderer
-                .addEffect(new EntityFX(world, x + 0.5, y + 1, z + 0.5, 0.0, 0.0, 0.0) {
+                .addEffect(new EntityFX(world, x+0.5, y + 1, z+0.75, 0.0, 0.0, 0.0) {
 
                     final double axisX = 0.0;
                     final double axisZ = 0.0;
@@ -83,10 +83,10 @@ public class IsolatorComponentFX extends MachineComponent implements IRender.Ran
 
                     @Override
                     public void onUpdate() {
-                        super.onUpdate();
-                        angle += 0.06;
-                        setPosition(axisX + 0.26 * Math.sin(angle), posY, axisZ + 0.26 * Math.cos(angle));
-                        setAlphaF((float) Math.cos(1.57 * particleAge / particleMaxAge));
+                      super.onUpdate();
+                      angle += 0.06;
+                      setPosition((x+0.5) + 0.26 * Math.sin(angle), posY, (z+0.5) + 0.26 * Math.cos(angle));
+                      setAlphaF((float) Math.cos(1.57 * particleAge / particleMaxAge));
                     }
                 });
     }

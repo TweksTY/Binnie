@@ -4,6 +4,7 @@ import java.util.Random;
 
 import net.minecraft.client.particle.EntityFX;
 import net.minecraft.client.renderer.entity.RenderItem;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -49,9 +50,6 @@ public class SplicerComponentFX extends MachineComponent
                     double angle = (int) (worldObj.getTotalWorldTime() % 4L) * 0.5 * 3.1415;
 
                     {
-                        axisX = 0.0;
-                        axisZ = 0.0;
-                        angle = 0.0;
                         motionX = 0.0;
                         motionZ = 0.0;
                         motionY = (rand.nextDouble() - 0.5) * 0.02;
