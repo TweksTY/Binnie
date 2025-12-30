@@ -4,7 +4,6 @@ import java.util.Random;
 
 import net.minecraft.client.particle.EntityFX;
 import net.minecraft.client.renderer.entity.RenderItem;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -45,8 +44,8 @@ public class SplicerComponentFX extends MachineComponent
         BinnieCore.proxy.getMinecraftInstance().effectRenderer
                 .addEffect(new EntityFX(world, x + 0.5, y + 1.5, z + 0.5, 0.0, 0.0, 0.0) {
 
-                    double axisX = posX;
-                    double axisZ = posZ;
+                    final double axisX = posX;
+                    final double axisZ = posZ;
                     double angle = (int) (worldObj.getTotalWorldTime() % 4L) * 0.5 * 3.1415;
 
                     {
